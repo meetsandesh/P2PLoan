@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar color="dark">
+		<ion-title>Document Checklist</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content padding class="checklist">
+    <ion-list>
+        <ion-list-header style="font-weight:bold; font-size:120%;">
+            Document Checklist:
+        </ion-list-header>
+        <ion-item-sliding *ngFor="let document of documentChecklist">
+            <ion-item>
+                {{ document?.name }}
+                <ion-icon class="doneUpload" name="cloud-done" item-right [ngClass]="{'hideIcon':document?.uploaded==0}"></ion-icon>
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button class="removeBackground" (click)="uploadDocument(document)" [disabled]="document?.uploaded==1"><ion-icon class="startUpload" name="cloud-upload"></ion-icon></button>
+                <button ion-button class="removeBackground" (click)="deleteDocument(document)" [disabled]="document?.uploaded==0"><ion-icon class="trashUpload" name="trash"></ion-icon></button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+    <button ion-button full class="checklist-button" (click)="next()" [disabled]="!proceed">{{buttonText}}</button>
+</ion-content>

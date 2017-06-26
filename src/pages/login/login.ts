@@ -69,4 +69,11 @@ export class LoginPage {
     //2ea2ae97-517c-ea28-3582-230756135768
     //2ea2ae97-517c-ea28-3582-230756135768
   }
+
+  /*public goToDocumentChecklist() {
+    //this.nav.push('RegisterPage');
+    console.log("inside register");
+    this.generateDeviceUUID();
+    this.nav.push('DocumentChecklist');
+  }*/
 }

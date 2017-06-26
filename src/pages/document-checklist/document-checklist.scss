@@ -1,0 +1,32 @@
+page-document-checklist {
+  	.checklist{
+      	background: #56CA96;
+      	color: #c7932b;
+    }
+
+    .checklist-button{
+      	color: #ffffff;
+      	background-color:#c7932b;
+    }
+
+    .doneUpload{
+    	color: green;
+    }
+
+    .startUpload{
+    	color: blue;
+      font: 40px;
+    }
+
+    .trashUpload{
+    	color: red;
+    }
+
+    .removeBackground{
+      background: transparent;
+    }
+
+    .hideIcon{
+      display: none;
+    }
+}
